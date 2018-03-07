@@ -13,25 +13,38 @@
 	
 		<h1> CHOOSE YOUR STARTER </h1>
 			<div>
-				1)<img src="bulbasaur.png">
-				2)<img src="squirtle.png">
-				3)<img src="charmander.png">
+				1) <img src="bulbasaur.png" onclick=bulbasaur()>
+				<div id='bulbtext'>Bulbasaur is a grass-type</div>
+				2) <img src= "squirtle.png" onclick=squirtle()>
+				<div id='squirtletext'>Squirtle is a water-type</div>
+				3) <img src= "charmander.png" onclick=charmander()>
+				<div id='chartext'>Charmander is a fire-type</div>
 			</div>
+			
 		<br/>
 		<H3 id="out"></H3>
 		<script>
 		var choice= prompt("Which do you choose? 1,2, or 3")
-		if (choice== 1){ 
-
-		 document.getElementById("out").innerHTML=(" You Chose bulbasaur ");} 
+		if (choice== 1)
+			{ document.getElementById("squirtletext").style.visibility="hidden";
+			document.getElementById("chartext").style.visibility="hidden";
+			
+			
+			document.getElementById("out").innerHTML=(" You Chose bulbasaur ");} 
 		 
-		 if (choice== 2){ 
-
-		 document.getElementById("out").innerHTML=(" You Chose squirtle ");} 
+		if (choice== 2)
+			{ document.getElementById("bulbtext").style.visibility="hidden";
+			document.getElementById("chartext").style.visibility="hidden";
+			
+			
+			document.getElementById("out").innerHTML=(" You Chose squirtle ");} 
 		 
-		 if (choice== 3){ 
-
-		 document.getElementById("out").innerHTML=(" You Chose charmander ");} 
+		if (choice== 3)
+			{ document.getElementById("squirtletext").style.visibility="hidden";
+			document.getElementById("bulbtext").style.visibility="hidden";
+			
+			
+			document.getElementById("out").innerHTML=(" You Chose charmander ");} 
 		</script>
 	</body>
 </html>
